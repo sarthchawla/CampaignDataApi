@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31613.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CampaignDataApi", "CampaignDataApi\CampaignDataApi.csproj", "{E3637E43-B8FE-4F91-8A8D-DBC649C86088}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E3637E43-B8FE-4F91-8A8D-DBC649C86088}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3637E43-B8FE-4F91-8A8D-DBC649C86088}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3637E43-B8FE-4F91-8A8D-DBC649C86088}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3637E43-B8FE-4F91-8A8D-DBC649C86088}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {37E3A940-7317-4CFB-A7E7-89C528F5C75D}
+	EndGlobalSection
+EndGlobal

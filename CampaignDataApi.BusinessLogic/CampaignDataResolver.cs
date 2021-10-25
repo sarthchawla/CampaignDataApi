@@ -10,13 +10,29 @@ using System.Threading.Tasks;
 
 namespace CampaignDataApi.BusinessLogic
 {
+    /// <summary>
+    /// The campaign resolver.
+    /// </summary>
+    /// <seealso cref="CampaignDataApi.BusinessLogic.Interfaces.IDataResolver" />
     public class CampaignDataResolver : IDataResolver
     {
         private readonly ICampaignApiClient _campaignApiClient;
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CampaignDataResolver"/> class.
+        /// </summary>
+        /// <param name="configuration">The configuration.</param>
         public CampaignDataResolver(IConfiguration configuration)
         {
             _campaignApiClient = new CampaginApiClient(configuration);
         }
+
+        /// <summary>
+        /// Gets the active campaigns.
+        /// </summary>
+        /// <returns>
+        /// List of all active campaigns
+        /// </returns>
         public async Task<List<ICampaign>> GetActiveCampaigns()
         {
             List<ICampaign> campaigns = (await _campaignApiClient.GetData()).ToList<ICampaign>();
@@ -29,6 +45,12 @@ namespace CampaignDataApi.BusinessLogic
             return activeCampaigns;
         }
 
+        /// <summary>
+        /// Gets all campaigns.
+        /// </summary>
+        /// <returns>
+        /// List of all campaigns
+        /// </returns>
         public async Task<List<ICampaign>> GetAllCampaigns()
         {
             List<ICampaign> campaigns = (await _campaignApiClient.GetData()).ToList<ICampaign>();
@@ -38,6 +60,12 @@ namespace CampaignDataApi.BusinessLogic
             return orderedCampaigns;
         }
 
+        /// <summary>
+        /// Gets the closed campaigns.
+        /// </summary>
+        /// <returns>
+        /// List of all closed campaigns
+        /// </returns>
         public async Task<List<ICampaign>> GetClosedCampaigns()
         {
             List<ICampaign> campaigns = (await _campaignApiClient.GetData()).ToList<ICampaign>();

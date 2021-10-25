@@ -2,6 +2,9 @@
 
 namespace CampaignDataApi.DataObjects.Interfaces
 {
+    /// <summary>
+    /// Campaign interface.
+    /// </summary>
     public interface ICampaign
     {
         string Code { get; set; }

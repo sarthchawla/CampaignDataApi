@@ -3,6 +3,10 @@ using System;
 
 namespace CampaignDataApi.DataObjects
 {
+    /// <summary>
+    /// Campaign data object
+    /// </summary>
+    /// <seealso cref="CampaignDataApi.DataObjects.Interfaces.ICampaign" />
     public class Campaign : ICampaign
     {
         public string Code { get; set; }

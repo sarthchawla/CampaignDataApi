@@ -10,17 +10,31 @@ using System.Threading.Tasks;
 
 namespace CampaignDataApi.BusinessLogic.Clients
 {
+    /// <summary>
+    /// The api client for campaigns data fetching.
+    /// </summary>
+    /// <seealso cref="CampaignDataApi.BusinessLogic.Clients.Interfaces.ICampaignApiClient" />
     public class CampaginApiClient : ICampaignApiClient
     {
         private readonly string _uriString;
         private const string MediaType = "application/json";
         private const string RequestUri = "api/campaign";
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CampaginApiClient"/> class.
+        /// </summary>
+        /// <param name="configuration">The configuration.</param>
         public CampaginApiClient(IConfiguration configuration)
         {
             _uriString = configuration["CampaignDataApi"];
         }
 
+        /// <summary>
+        /// Gets the data.
+        /// </summary>
+        /// <returns>
+        /// List of campaigns
+        /// </returns>
         public async Task<List<Campaign>> GetData()
         {
             List<Campaign> data = new List<Campaign>();
@@ -47,7 +61,6 @@ namespace CampaignDataApi.BusinessLogic.Clients
             {
                 Console.WriteLine($"GetData: Failed with exception: {ex.Message}, stack trace: {ex.StackTrace}");
             }
-
 
             return data;
         }

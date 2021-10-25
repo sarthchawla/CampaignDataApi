@@ -1,13 +1,12 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\CampaignDataApi.BusinessLogic\CampaignDataApi.BusinessLogic.csproj" />
     <ProjectReference Include="..\CampaignDataApi.DataObjects\CampaignDataApi.DataObjects.csproj" />
-    <ProjectReference Include="..\CampaignDataApi.Facade\CampaignDataApi.Facade.csproj" />
   </ItemGroup>
-
 
 </Project>
